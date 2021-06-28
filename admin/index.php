@@ -1,5 +1,23 @@
 <?php include "includes/admin_header.php"; ?>
 
+
+
+<?php 
+
+
+
+    
+?>
+
+
+
+
+
+
+
+
+
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -21,6 +39,8 @@
                             Welcome to admin
                             <small><?php echo $_SESSION['username']; ?></small>
                         </h1>
+
+
 
                         <ol class="breadcrumb">
                             <li>

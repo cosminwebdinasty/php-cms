@@ -17,13 +17,17 @@
 
 
                     <?php 
-                        $query = "SELECT * FROM categories";
-                        $result = mysqli_query($connection,$query);
+                    $query = "SELECT * FROM categories LIMIT 3";
 
-                        while($row = mysqli_fetch_assoc($result)){
-                            $catName = $row['cat_title'];
-                            echo "<li><a href='#'>{$catName}</a></li>";
-                        }
+                    $result = mysqli_query($connection,$query);
+
+                    while($row = mysqli_fetch_assoc($result)){
+
+                        $catName = $row['cat_title'];
+                        $catId = $row['cat_id'];
+
+                        echo "<li><a href='category.php?category={$catId}'>{$catName}</a></li>";
+                    }
                     ?>
 
                    <li>

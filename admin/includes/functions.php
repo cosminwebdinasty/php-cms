@@ -92,4 +92,94 @@ function confirmQuery($result){
 
 
 
+function users_online() {
+
+    global $connection;
+
+        $session = session_id();
+        $time = time();
+        $time_out_in_seconds = 05;
+        $time_out = $time - $time_out_in_seconds;
+
+        $query = "SELECT * FROM users_online WHERE session = '$session'";
+        $send_query = mysqli_query($connection, $query);
+        $count = mysqli_num_rows($send_query);
+
+            if($count == NULL) {
+
+            mysqli_query($connection, "INSERT INTO users_online(session, time) VALUES('$session','$time')");
+
+
+            } else {
+
+            mysqli_query($connection, "UPDATE users_online SET time = '$time' WHERE session = '$session'");
+
+            }
+
+        $users_online_query =  mysqli_query($connection, "SELECT * FROM users_online WHERE time > '$time_out'");
+        return $count_user = mysqli_num_rows($users_online_query);
+
+}
+
+
+
+
+    function escape($string){
+        global $connection;
+
+        mysqli_real_escape_string($connection, trim($string));
+    }
+
+
+
+
+
+    function query($query){
+        global $connection;
+        return mysqli_query($connection,$query);
+    }
+
+
+
+
+
+    function isLoggedIn(){
+
+        if(isset($_SESSION['role'])){
+            return true;
+        }
+
+    }
+
+
+
+
+    function loggedInUserId(){
+
+        if(isLoggedIn()){
+
+            $result = query("SELECT * FROM users WHERE username ='" . $_SESSION['username'] . "'");
+            $user = mysqli_fetch_array($result);
+            return mysqli_num_rows($result) >= 1 ? $user['user_id'] : false;
+
+           
+        }
+        return false;
+    }
+
+
+
+    function userLikedThisPost($post_id = ''){
+
+      $result = query("SELECT * FROM likes WHERE user_id =" . loggedInUserId() . " AND post_id = $post_id");
+
+        return mysqli_num_rows($result) >= 1 ? true : false;
+    }
+
+
+
+
+
+
+
 ?>

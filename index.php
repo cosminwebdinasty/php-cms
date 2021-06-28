@@ -1,35 +1,6 @@
 <?php include "includes/header.php";
       include "includes/db.php";?>
 
-<?php 
-
-
-    $session = session_id();
-    $time = time();
-    $time_out_seconds = 60;
-
-    $time_out = $time - $time_out_seconds;
-
-    $query = "SELECT * FROM users_online WHERE session ='$session'";
-    $result_online = mysqli_query($connection, $query);
-
-    $count = mysqli_num_rows($result_online);
-
-    if($count == NULL){
-
-        mysqli_query($connection, "INSERT INTO users_online(sesion,time) VALUES('$session', '$time')  ");
-    }
-    else{
-        mysqli_query($connection, "UPDATE users_online SET time = '$time' WHERE session = '$session' ");
-
-    }
-
-
-?>
-
-
-
-
 
     <!-- Navigation -->
     <?php include "includes/navigation.php"; ?>
@@ -50,7 +21,7 @@
                 </h1>
             <?php 
 
-
+            
 
 
 
