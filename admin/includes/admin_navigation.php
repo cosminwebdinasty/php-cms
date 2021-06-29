@@ -39,7 +39,7 @@
                     </li>
                   
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#posts"><i class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#posts"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="posts" class="collapse">
                             <li>
                                 <a href="./posts.php">View All Posts</a>
@@ -50,14 +50,15 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
+                        <a href="./categories.php"><i class="fa fa-list-alt" aria-hidden="true"></i> Categories</a>
                     </li>
               
                     <li>
-                        <a href="./comments.php"><i class="fa fa-fw fa-file"></i> Comments</a>
+                        <a href="./comments.php"><i class="fa fa-comments" aria-hidden="true"></i> Comments</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-user" aria-hidden="true"></i>
+ Users <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="users" class="collapse">
                             <li>
                                 <a href="users.php">View All Users</a>
@@ -68,7 +69,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Profile</a>
+                        <a href="profile.php"><i class="fa fa-cog" aria-hidden="true"></i> Profile</a>
                     </li>
                 </ul>
             </div>

@@ -27,7 +27,7 @@
                                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> <a style="color:#777;" href="../index.php"> Back to Home</a>
+                            <i class="fa fa-home" aria-hidden="true"></i> <a style="color:#777;" href="../index.php"> Back to Home</a>
                             </li>
                         </ol>
                     </div>
