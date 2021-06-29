@@ -122,8 +122,6 @@ function users_online() {
 }
 
 
-
-
     function escape($string){
         global $connection;
 
@@ -131,16 +129,10 @@ function users_online() {
     }
 
 
-
-
-
     function query($query){
         global $connection;
         return mysqli_query($connection,$query);
     }
-
-
-
 
 
     function isLoggedIn(){
@@ -150,8 +142,6 @@ function users_online() {
         }
 
     }
-
-
 
 
     function loggedInUserId(){
@@ -168,18 +158,12 @@ function users_online() {
     }
 
 
-
     function userLikedThisPost($post_id = ''){
 
       $result = query("SELECT * FROM likes WHERE user_id =" . loggedInUserId() . " AND post_id = $post_id");
 
         return mysqli_num_rows($result) >= 1 ? true : false;
     }
-
-
-
-
-
 
 
 ?>

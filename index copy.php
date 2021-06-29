@@ -12,8 +12,6 @@
 
             <!-- Blog Entries Column -->
 
-
-
             <div class="col-md-8">
             <h1 class="page-header">
                     Page Heading
@@ -41,9 +39,6 @@
 
             ?>
 
-
-             
-
                 <!-- First Blog Post -->
                 <h2>
                     <a href="post.php?p_id=<?php echo $post_id; ?>"> <?php echo $title; ?></a>
@@ -58,14 +53,11 @@
                 <p><?php echo $content; ?></p>
                 <a class="btn btn-primary" href="post.php?p_id=<?php echo $post_id; ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
                
-
                 <hr>
                 <?php } }?>
             </div> 
             <!-- Blog Sidebar Widgets Column -->
             <?php include "includes/sidebar.php"; ?>
-
-        
 
         </div>
         <!-- /.row -->

@@ -1,18 +1,5 @@
 <div class="col-md-4">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Blog Search Well -->
 <div class="well">
     <h4>Blog Search</h4>
@@ -29,10 +16,6 @@
 </form> <!-- search form -->
     <!-- /.input-group -->
 </div>
-
-
-
-
 
 <!-- Blog Search Well -->
 <div class="well">
@@ -53,16 +36,6 @@
 </form> <!-- search form -->
     <!-- /.input-group -->
 </div>
-
-
-
-
-
-
-
-
-
-
 
 <!-- Blog Categories Well -->
 <div class="well">
@@ -92,7 +65,6 @@
     </div>
     <!-- /.row -->
 </div>
-
 
 <!-- Side Widget Well -->
 <?php include "widget.php"; ?>

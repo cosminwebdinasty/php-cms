@@ -33,7 +33,6 @@
                                 $role= $row['user_role'];
                                 $image = $row['user_image'];
                                 
-                               
                                 echo "<tr>";
                                 echo " <td>{$id}</td>";
                                 echo " <td>{$username}</td>";
@@ -42,7 +41,6 @@
                                 echo " <td>{$email}</td>";
                                 echo " <td>{$role}</td>";
 
-                 
                                 echo "<td><a href='./users.php?change_to_admin={$id}' class='btn btn-info'>Admin</a> ";
                                 echo "<a href='./users.php?change_to_sub={$id}' class='btn btn-info'>Subscriber</a></td>";
 
@@ -50,11 +48,9 @@
                                 echo "<td><a onClick=\"javascript:return confirm('Are you sure you want to delete the user?') \" href='./users.php?delete={$id}' class='btn btn-danger'>Delete</a></td>";
                                 
                                 echo "</tr>";
-
                                  
                             }
                         
-
                             //update role to admin
                             if(isset($_GET['change_to_admin'])){
 
@@ -66,8 +62,6 @@
                                 header('location: ./users.php');
                                 confirmQuery($result);
                             }
-
-
 
                             //update role to subscriber
                             if(isset($_GET['change_to_sub'])){
@@ -81,8 +75,6 @@
                                 confirmQuery($result);
                             }
 
-
-                            
                             //delete query
                             if(isset($_GET['delete'])){
 
@@ -100,11 +92,6 @@
                                     }
                               }
                             }
-
-
-
-
-
 
 
                             ?>

@@ -1,10 +1,7 @@
 <?php  include "includes/db.php"; ?>
 <?php  include "admin/includes/functions.php"; ?>
  <?php  include "includes/header.php"; ?>
-
-
 <?php 
-
 
     // the message
 $msg = "First line of text\nSecond line of text";
@@ -14,12 +11,6 @@ $msg = wordwrap($msg,70);
 
 // send email
 mail("cosmin@webdinasty.ro","My subject",$msg);
-
-
-
-
-
-
 
     if(isset($_POST['submit'])){
 
@@ -31,12 +22,10 @@ mail("cosmin@webdinasty.ro","My subject",$msg);
 
 ?>
 
-
     <!-- Navigation -->
     
     <?php  include "includes/navigation.php"; ?>
     
- 
     <!-- Page Content -->
     <div class="container">
     
@@ -72,9 +61,6 @@ mail("cosmin@webdinasty.ro","My subject",$msg);
     </div> <!-- /.container -->
 </section>
 
-
         <hr>
-
-
 
 <?php include "includes/footer.php";?>

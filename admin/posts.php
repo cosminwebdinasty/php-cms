@@ -21,7 +21,6 @@
                             Posts
                         </h1>
 
-
                         <?php
                         
                             if(isset($_GET['source'])){
@@ -43,15 +42,9 @@
                                     default : 
                                     include "includes/view_all_posts.php";
 
-                                }
-
-
-
-                                
+                                }      
                         ?>
 
-
-                       
                     </div>
                 </div>
                 <!-- /.row -->

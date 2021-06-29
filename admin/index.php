@@ -1,23 +1,5 @@
 <?php include "includes/admin_header.php"; ?>
 
-
-
-<?php 
-
-
-
-    
-?>
-
-
-
-
-
-
-
-
-
-
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -40,8 +22,6 @@
                             <small><?php echo $_SESSION['username']; ?></small>
                         </h1>
 
-
-
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
@@ -54,9 +34,6 @@
                 </div>
                 <!-- /.row -->
 
-
-
-       
                 <!-- /.row -->
                 
                 <div class="row">
@@ -177,10 +154,6 @@
 </div>
             <!-- /.row -->
 
-
-
-
-
 <?php 
 
 $query = "SELECT * FROM posts WHERE post_status = 'draft'";
@@ -232,8 +205,6 @@ $all_posts =  mysqli_num_rows($result);
             
             ?>
 
-
-
           /* ['Posts', 1000], */
       
         ]);
@@ -254,14 +225,7 @@ $all_posts =  mysqli_num_rows($result);
 
 <div id="columnchart_material" style="width:'auto'; height: 500px;"></div>
 
-
-
 </div>
-
-
-
-
-
 
             </div>
             <!-- /.container-fluid -->

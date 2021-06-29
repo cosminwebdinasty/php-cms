@@ -90,9 +90,6 @@
                             die("afsdf" . mysqli_error());
                         }
 
-
-
-
                     }
                 
                 ?>
@@ -143,13 +140,8 @@
                     $content= $row['comment_content'];
                     $status= $row['comment_status'];
                     $date= $row['comment_date'];
-                    
 
-                
-                
-                
                 ?>
-
 
                 <!-- Comment -->
                 <div class="media">
@@ -169,8 +161,6 @@
             </div> 
             <!-- Blog Sidebar Widgets Column -->
             <?php include "includes/sidebar.php"; ?>
-
-        
 
         </div>
         <!-- /.row -->

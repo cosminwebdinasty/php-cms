@@ -26,9 +26,7 @@
 
 ?>
 
-
 <?php  
-
 
 if(isset($_POST['update_user'])) {
        
@@ -58,8 +56,6 @@ die("Query Failed" . mysqli_error($connection));
 
 $row = mysqli_fetch_array($select_randsalt_query); 
 
-
-
   $query = "UPDATE users SET ";
   $query .="user_firstname  = '{$user_firstname}', ";
   $query .="user_lastname = '{$user_lastname}', ";
@@ -69,18 +65,13 @@ $row = mysqli_fetch_array($select_randsalt_query);
   $query .="user_password   = '{$user_password}' ";
   $query .= "WHERE username = '{$username}' ";
 
-
     $edit_user_query = mysqli_query($connection,$query);
 
     confirmQuery($edit_user_query);
-
-
 }
 
 
 ?>
-
-
 
     <div id="wrapper">
 
@@ -103,8 +94,6 @@ $row = mysqli_fetch_array($select_randsalt_query);
                             User Profile
                         </h1>
 
-
-  
                         <form action="" method="post" enctype="multipart/form-data">
 
 
@@ -117,7 +106,6 @@ $row = mysqli_fetch_array($select_randsalt_query);
 <label for="post_status">Lastname</label>
 <input type="text" class="form-control" name="user_lastname" value="<?php echo $lastname; ?>">
 </div>
-
 
 <div class="form-group">
 <label for="post_category_id">User Role</label>
@@ -141,19 +129,15 @@ $row = mysqli_fetch_array($select_randsalt_query);
 
 </div>
 
-
-
 <!-- <div class="form-group">
 <label for="post_image">Post Image</label>
 <input type="file" class="form-control" name="post_image">
 </div> -->
 
-
 <div class="form-group">
 <label for="post_tags">Username</label>
 <input type="text" class="form-control" name="username" value="<?php echo $username; ?>">
 </div>
-
 
 <div class="form-group">
 <label for="post_content">Email</label>
@@ -172,8 +156,7 @@ $row = mysqli_fetch_array($select_randsalt_query);
 
 
 </form>
-
-                       
+                 
                     </div>
                 </div>
                 <!-- /.row -->

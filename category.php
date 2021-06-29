@@ -12,8 +12,6 @@
 
             <!-- Blog Entries Column -->
 
-
-
             <div class="col-md-8">
             <h1 class="page-header">
                     Page Heading
@@ -22,13 +20,10 @@
             <?php 
 
 
-
             if(isset($_GET['category'])){
 
                 $category_id = $_GET['category'];
             }
-
-
 
             $query = "SELECT * FROM posts WHERE post_category_id = '$category_id'";
 
@@ -45,9 +40,6 @@
                 $tags = $row['post_tags'];
             ?>
 
-
-             
-
                 <!-- First Blog Post -->
                 <h2>
                     <a href="post.php?p_id=<?php echo $post_id; ?>"> <?php echo $title; ?></a>
@@ -62,14 +54,11 @@
                 <p><?php echo $content; ?></p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
                
-
                 <hr>
                 <?php } ?>
             </div> 
             <!-- Blog Sidebar Widgets Column -->
             <?php include "includes/sidebar.php"; ?>
-
-        
 
         </div>
         <!-- /.row -->

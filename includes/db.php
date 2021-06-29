@@ -8,12 +8,10 @@ $db['db_name'] = "blog";
 foreach($db as $key => $value){
     define(strtoupper($key), $value);
 }
-
 $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 /* if($connection){
     echo "Connection ok";
 }
 else die("Failed to connect to the database"); */
-
 ?>

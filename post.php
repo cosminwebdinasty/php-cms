@@ -7,7 +7,6 @@
 
     <?php 
     
-    
         if(isset($_POST['liked'])){
             $thepost_id = $_POST['post_id'];
             $theuser_id = $_POST['user_id'];
@@ -30,11 +29,6 @@
             mysqli_query($connection, "INSERT INTO likes(user_id, post_id) VALUES($theuser_id, $thepost_id)");
             exit();
         }
-    
-    
-
-
-
 
         if(isset($_POST['unliked'])){
             $thepost_id = $_POST['post_id'];
@@ -51,18 +45,13 @@
 
                 echo $post['post_id'];
             }
-            
 
             mysqli_query($connection, "UPDATE posts SET likes = $likes - 1 WHERE post_id = $thepost_id");
             exit(); 
         }
 
-
-
-
     
     ?>
-
 
 
     <!-- Page Content -->
@@ -87,9 +76,6 @@
                 
             $view_query = "UPDATE posts SET post_views = post_views + 1 WHERE post_id = {$post_id}";
             $views_result = mysqli_query($connection, $view_query);
-
-               
-
 
             $query = "SELECT * FROM posts WHERE post_id = '$post_id' ";
 
@@ -121,19 +107,14 @@
 
                 <hr>
 
-
-
               <?php 
               
-                    
               $likes_query = "SELECT * FROM likes WHERE post_id = $post_id ";
 
               $likes_result = mysqli_query($connection,$likes_query);
 
              if(mysqli_num_rows($likes_result) < 1) { 
               
-              
-         
           ?>
 
                 <div class="row">
@@ -149,19 +130,12 @@
                     <?php } ?>
 
                 <?php   
-           
                 
                 $likes_query = "SELECT * FROM likes WHERE post_id = $post_id ";
 
                 $likes_result = mysqli_query($connection,$likes_query);
-
-               
-
-               
-                
                 
                 ?>
-
 
                 <div class="row">
                     <p class="pull-right"><?php  echo mysqli_num_rows($likes_result); ?></a> </p>
@@ -169,18 +143,12 @@
 
                 <div class="clearfix"></div>
 
-
                 <?php } }
-                
                 
                 else {
 
                     header("Location: index.php");
                 }
-
-
-
-
 
                 ?>
 
@@ -206,20 +174,14 @@
                             die("error" . mysqli_error());
                         }
 
-
                         $query = "UPDATE posts SET post_comment_count = post_comment_count + 1 ";
                         $query .= "WHERE post_id = $post_id";
-
                         $result2 = mysqli_query($connection,$query);
 
                         if(!$result){
 
                             die("error" . mysqli_error());
                         }
-
-
-
-
                     }
                 
                 ?>
@@ -260,7 +222,6 @@
 
                 $comments_result = mysqli_query($connection,$query_comments);
         
-
                 while($row = mysqli_fetch_assoc($comments_result)){
 
                     $id = $row['comment_id'];
@@ -272,7 +233,6 @@
                     $date= $row['comment_date'];
                     
                 ?>
-
 
                 <!-- Comment -->
                 <div class="media">
@@ -292,8 +252,6 @@
             </div> 
             <!-- Blog Sidebar Widgets Column -->
             <?php include "includes/sidebar.php"; ?>
-
-        
 
         </div>
         <!-- /.row -->
@@ -321,7 +279,6 @@
                 'user_id': user_id
 
             }
-
            });
 
         });
@@ -337,19 +294,12 @@
             'post_id': post_id,
             'user_id': user_id
 
-        }
+         }
 
-     });
+       });
+
+    });
 
 });
 
-
-
-
-    });
- 
- 
- 
- 
- 
  </script>

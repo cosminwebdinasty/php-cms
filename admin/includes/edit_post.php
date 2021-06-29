@@ -9,9 +9,7 @@
 <body>
     
   
-
 <?php 
-
 
 if(isset($_GET['p_id'])){
 
@@ -38,8 +36,6 @@ while($row = mysqli_fetch_assoc($result)){
 }
 
     if(isset($_POST['update_post'])){
-
-        
 
         $post_title = $_POST['post_title'];
         $post_author = $_POST['post_author'];
@@ -68,7 +64,6 @@ while($row = mysqli_fetch_assoc($result)){
            
         }
 
-
         $query = "UPDATE posts SET ";
         $query .="post_title  = '{$post_title}', ";
         $query .="post_category_id = '{$post_category_id}', ";
@@ -90,8 +85,6 @@ while($row = mysqli_fetch_assoc($result)){
          echo "<div class='alert alert-info'>The post has been updated</div>"; 
     }
 
-
-
 ?>
 
 <form action="" method="post" enctype="multipart/form-data">
@@ -100,7 +93,6 @@ while($row = mysqli_fetch_assoc($result)){
 <label for="post_title">Post Title</label>
     <input type="text" class="form-control" name="post_title" value="<?php echo $title; ?>">
 </div>
-
 
 <div class="form-group">
 <label for="post_category_id">Post Category</label>
@@ -124,10 +116,7 @@ while($row = mysqli_fetch_assoc($result)){
 
             }
         
-        
         ?>
-    
-    
     
     </select>
 
@@ -154,35 +143,23 @@ while($row = mysqli_fetch_assoc($result)){
     }
 
         else  echo "<option value = 'published'>published</option>";
-
 ?>
 
-     
     </select>
 </div>
 
 
-<!-- <div class="form-group">
-<label for="post_status">Post Status</label>
-<input type="text" class="form-control" name="post_status" value="<?php echo $status; ?>">
-</div> -->
-
-
 <div class="form-group">
-
-
 
 <label for="post_image">Post Image</label><br>
 <img width="300px" src="../images/<?php echo $image; ?>">
 <input type="file" class="form-control" name="post_image">
 </div>
 
-
 <div class="form-group">
 <label for="post_tags">Post Tags</label>
 <input type="text" class="form-control" name="post_tags" value="<?php echo $tags; ?>">
 </div>
-
 
 <div class="form-group">
 <label for="post_content">Post Content</label>
@@ -198,9 +175,7 @@ while($row = mysqli_fetch_assoc($result)){
 <input type="submit" name="update_post" class="btn btn-primary" value="Update Post">
 </div>
 
-
 </form>
-
 
 </body>
 </html>

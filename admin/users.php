@@ -43,14 +43,8 @@
                                     default : 
                                     include "includes/view_all_users.php";
 
-                                }
-
-
-
-                                
+                                } 
                         ?>
-
-
                        
                     </div>
                 </div>

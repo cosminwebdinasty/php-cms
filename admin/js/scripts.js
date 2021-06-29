@@ -9,8 +9,6 @@ ClassicEditor
         console.error(error);
     });
 
-
-
     $('#selectAllBoxes').click(function(event){
         if(this.checked) {
             $('.checkBoxes').each(function(){
@@ -32,7 +30,6 @@ ClassicEditor
     });
 
 });
-
 
 
 

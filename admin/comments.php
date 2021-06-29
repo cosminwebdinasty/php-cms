@@ -21,7 +21,6 @@
                             Comments
                         </h1>
 
-
                         <?php
                         
                             if(isset($_GET['source'])){
@@ -44,14 +43,8 @@
                                     include "includes/view_all_comments.php";
 
                                 }
-
-
-
-                                
                         ?>
 
-
-                       
                     </div>
                 </div>
                 <!-- /.row -->

@@ -12,7 +12,6 @@
 <?php  
 
     if(isset($_POST['create_user'])){
-
       
         $user_firstname = $_POST['user_firstname'];
         $user_lastname = $_POST['user_lastname'];
@@ -38,34 +37,24 @@
 
         $result = mysqli_query($connection, $query);
 
-      confirmQuery($result); 
-
+        confirmQuery($result); 
 
         echo "<div class='alert alert-success'>The user has been added / <a href='users.php'>View Users</a></div>";
     }
 
-
 ?>
 
-    
 <form action="" method="post" enctype="multipart/form-data">
-
-
-
-
 
 <div class="form-group">
 <label for="post_author">Firstname</label>
 <input type="text" class="form-control" name="user_firstname">
 </div>
 
-
 <div class="form-group">
 <label for="post_status">Lastname</label>
 <input type="text" class="form-control" name="user_lastname">
 </div>
-
-
 
 <div class="form-group">
 <label for="post_category_id">User Role</label>
@@ -76,15 +65,12 @@
         <option value="admin">Admin</option>
         <option value="subscriber">Subscriber</option>
         
-
-
         <?php 
         
            /*  global $connection;
 
             $query = "SELECT * FROM users";
             $result = mysqli_query($connection,$query);
-
 
             while($row = mysqli_fetch_assoc($result)){
 
@@ -96,12 +82,9 @@
             } */  
         ?>
     
-    
-    
     </select>
 
 </div>
-
 
 
 <!-- <div class="form-group">
@@ -109,12 +92,10 @@
 <input type="file" class="form-control" name="post_image">
 </div> -->
 
-
 <div class="form-group">
 <label for="post_tags">Username</label>
 <input type="text" class="form-control" name="username">
 </div>
-
 
 <div class="form-group">
 <label for="post_content">Email</label>
@@ -131,13 +112,7 @@
 <input type="submit" name="create_user" class="btn btn-primary" value="Add User">
 </div>
 
-
 </form>
-
-
-
-
-
 
 </body>
 </html>

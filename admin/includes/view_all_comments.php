@@ -32,9 +32,6 @@
                                 $content= $row['comment_content'];
                                 $status= $row['comment_status'];
                                 $date= $row['comment_date'];
-                               
-
-                                
 
                                 echo "<tr>";
                                 
@@ -60,12 +57,9 @@
                                 echo "<td><a onClick=\"javascript:return confirm('Are you sure you want to delete the comment?') \" href='./comments.php?delete={$id}' class='btn btn-danger'>Delete</a></td>";
                                 
                                 echo "</tr>";
-
                                  
                             }
                         
-
-
                             //approve comment
                             if(isset($_GET['approve'])){
 
@@ -77,10 +71,6 @@
                                 header('location: ./comments.php');
                                 confirmQuery($result);
                             }
-
-
-
-
 
                             //unapprove comment
                             if(isset($_GET['unapprove'])){
@@ -94,12 +84,6 @@
                                 confirmQuery($result);
                             }
 
-
-
-
-
-
-
                             //delete query
                             if(isset($_GET['delete'])){
 
@@ -112,19 +96,13 @@
                                 confirmQuery($result);
                             }
 
-
-
                             //edit query
 
                             if(isset($_GET['edit'])){
 
                                 $id = $_GET['edit'];
 
-
                             }
-
-
-
 
                             ?>
 

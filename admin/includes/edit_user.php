@@ -11,10 +11,8 @@
 
 <?php  
 
-
     if(isset($_GET['edit_user'])){
 
-        
         $the_user_id = $_GET['edit_user'];
 
         $query = "SELECT * FROM users WHERE user_id = $the_user_id ";
@@ -32,16 +30,11 @@
                                 $role= $row['user_role'];
                                 $image = $row['user_image'];
 
-
-                            
-
                             }
     }
 
-
     if(isset($_POST['edit_user'])) {
-       
-            
+      
         $user_firstname = $_POST['user_firstname'];
         $user_lastname = $_POST['user_lastname'];
         $user_role = $_POST['user_role'];
@@ -49,14 +42,10 @@
 //            $post_image = $_FILES['image']['name'];
 //            $post_image_temp = $_FILES['image']['tmp_name'];
 
-
         $username = $_POST['username'];
         $user_email = $_POST['user_email'];
         $user_password = $_POST['user_password'];
 //            $post_date = date('d-m-y');
-
-
-
 
         $query = "SELECT randSalt FROM users";
         $result_randsalt = mysqli_query($connection,$query);
@@ -67,8 +56,6 @@
 
         $salt = $row['randSalt'];
         $hashed_password = crypt($user_password, $salt);
-
-
    
 //        move_uploaded_file($post_image_temp, "./images/$post_image" );
 
@@ -80,8 +67,6 @@
     }
    
     $row = mysqli_fetch_array($select_randsalt_query); 
-
-
 
       $query = "UPDATE users SET ";
       $query .="user_firstname  = '{$user_firstname}', ";
@@ -96,16 +81,11 @@
         $edit_user_query = mysqli_query($connection,$query);
    
         confirmQuery($edit_user_query);
-
-
 }
 
-
 ?>
-
     
 <form action="" method="post" enctype="multipart/form-data">
-
 
 <div class="form-group">
 <label for="post_author">Firstname</label>
@@ -116,7 +96,6 @@
 <label for="post_status">Lastname</label>
 <input type="text" class="form-control" name="user_lastname" value="<?php echo $lastname; ?>">
 </div>
-
 
 <div class="form-group">
 <label for="post_category_id">User Role</label>
@@ -141,7 +120,6 @@
 </div>
 
 
-
 <!-- <div class="form-group">
 <label for="post_image">Post Image</label>
 <input type="file" class="form-control" name="post_image">
@@ -152,7 +130,6 @@
 <label for="post_tags">Username</label>
 <input type="text" class="form-control" name="username" value="<?php echo $username; ?>">
 </div>
-
 
 <div class="form-group">
 <label for="post_content">Email</label>
@@ -171,11 +148,6 @@
 
 
 </form>
-
-
-
-
-
 
 </body>
 </html>

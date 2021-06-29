@@ -52,30 +52,14 @@
 
                 $copy_query = mysqli_query($connection, $query);   
 
-
-
-
-
-
                 break;
         }
-
-
-
-
-
        
       }
 
     }
 
-
-
-
 ?>
-
-
-
 
 <form action="" method="post">
 
@@ -90,8 +74,6 @@
     <option value="delete">Delete</option>
 
     </select>
-
-
 </div>
 
 <div class="col-xs-4">
@@ -100,7 +82,6 @@
 <a class="btn btn-primary" href="posts.php?source=add_post">Add New</a>
 
 </div>
-
 
 <table class="table table-bordered table-hover">
                             <thead>
@@ -153,10 +134,7 @@
                                 
                                 echo "<tr>" ; ?>
 
-
                                         <td><input type='checkbox' name='checkBoxArray[]' class='checkBoxes' value="<?php echo $id;  ?>"></td>
-
-
 
                                         <?php echo "
                                         <td>{$id}</td>
@@ -188,8 +166,6 @@
                                 confirmQuery($result);
                             }
 
-
-
                             //reset views counter query
                             if(isset($_GET['reset'])){
 
@@ -200,10 +176,6 @@
                                 header('location: ./posts.php');
                                 confirmQuery($result);
                             }
-
-
-
-
 
                             ?>
 

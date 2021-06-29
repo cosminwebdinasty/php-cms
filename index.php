@@ -12,8 +12,6 @@
 
             <!-- Blog Entries Column -->
 
-
-
             <div class="col-md-8">
             <h1 class="page-header">
                     Page Heading
@@ -21,19 +19,11 @@
                 </h1>
             <?php 
 
-            
-
-
-
-
             $posts_count = "SELECT * FROM posts";
             $count_result = mysqli_query($connection,$posts_count);
             $count = mysqli_num_rows($count_result);
            
             $count = ceil($count / 5);
-
-
-
 
             if(isset($_GET['page'])){
 
@@ -53,7 +43,6 @@
                 $page_1 = ($page * 5) - 5;
             }
 
-
             $query = "SELECT * FROM posts LIMIT $page_1, 5";
 
             $result = mysqli_query($connection,$query);
@@ -65,7 +54,7 @@
                 $author = $row['post_author'];
                 $date   = $row['post_date'];
                 $image = $row['post_image'];
-                $content = substr( $row['post_content'],0, 200 );
+                $content = substr( $row['post_content'],15, 200 );
                 $tags = $row['post_tags'];
                 $post_status = $row['post_status'];
 
@@ -73,9 +62,6 @@
                 if($post_status == 'published'){
 
             ?>
-
-
-             
 
                 <!-- First Blog Post -->
                 <h2>
@@ -98,33 +84,22 @@
             <!-- Blog Sidebar Widgets Column -->
             <?php include "includes/sidebar.php"; ?>
 
-        
-
         </div>
         <!-- /.row -->
 
         <hr>
-
                     <ul class="pager">
                     
                      <?php 
-                     
+
                         for($i = 1; $i <= $count; $i++){
 
-
                             if($i == $page){
-
                                 echo "<li><a class='active_link' href='index.php?page={$i}'>{$i}</a></li>";
-
                             }else{
-
                                 echo "<li><a href='index.php?page={$i}'>{$i}</a></li>";
-
                             }
-
-
                         }
-
 
                      ?>
                     

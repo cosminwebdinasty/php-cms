@@ -5,17 +5,12 @@
 
 <?php 
 
-
     if(!isset($_SESSION['role'])){
-
 
             header("Location: ../index.php");
     }
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,10 +44,7 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-   
-
     <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
-    
     
 </head>
 
